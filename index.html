@@ -1,0 +1,236 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Paymo-about</title>
+    <meta charset="utf-8" />
+  
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  
+    <link rel="stylesheet" href="styles/build.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-video">
+        <video class="video" id="video" autoplay loop preload muted>
+          <source src="styles/video/city.webm" type="video/webm" />
+          <source src="styles/video/city.ogv" type="video/ogg" />
+          <source src="styles/video/city.mp4" type="video/mp4" />
+          <object id="video-object" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" type="application/x-shockwave-flash">
+            <param name="movie" value="styles/video/player.swf" />
+            <param name="flashvars" value="file=styles/video/city.flv&autoStart=true&controlbar=none&repeat=always" />
+            <param name="wmode" value="opaque" />
+            <embed id="video-embed" src="styles/video/player.swf" type="application/x-shockwave-flash" wmode="opaque" pluginspage="http://get.adobe.com/flashplayer/" flashvars="file=styles/video/city.flv&autoStart=true&controlbar=none&repeat=always" />
+          </object>
+        </video>
+      </div>
+      <div class="header-content">
+        <div class="header-content-title">Умный платежный сервис</div>
+        <div class="header-content-logo"></div>
+        <div class="header-content-description-list">
+          <div class="header-content-description-item">Универсальная платформа для приема <br> онлайн-платежей</div>
+          <div class="header-content-description-item">Платежные решения для банков и МФО</div>
+          <div class="header-content-description-item">Платежные сервисы для строительных и ЖКХ компаний</div>
+        </div>
+      </div>
+      <a href="#figures" class="scroll"></a>
+    </div>
+
+    <div class="figures" id="figures" data-url="data/figures.json">
+      <canvas></canvas>
+      <div class="limiter">
+        <div class="figures-nav">
+          <div class="figures-nav-item figures-nav-item__selected" data-figures="transactions">
+            <div class="figures-nav-item_title">01</div>
+            <div class="figures-nav-item_value">Транзакции</div>
+          </div>
+    
+          <div class="figures-nav-item" data-figures="customers">
+            <div class="figures-nav-item_title">02</div>
+            <div class="figures-nav-item_value">Клиенты</div>
+          </div>
+    
+          <div class="figures-nav-item" data-figures="merchants">
+            <div class="figures-nav-item_title">03</div>
+            <div class="figures-nav-item_value">Интернет-магазины</div>
+          </div>
+    
+          <div class="figures-nav-item" data-figures="providers">
+            <div class="figures-nav-item_title">04</div>
+            <div class="figures-nav-item_value">Поставщики</div>
+          </div>
+        </div>
+    
+        <div class="figures-items">
+          <div class="figures-item figures-item__transactions figures-item__selected">
+            <div class="figures-item_title">Каждый день</div>
+            <div class="figures-item_value"></div>
+            <div class="figures-item_description">Транзакций <br> и это число постоянно увеличивается</div>
+          </div>
+    
+          <div class="figures-item figures-item__merchants">
+            <div class="figures-item_title">C нами сотрудничают</div>
+            <div class="figures-item_value"></div>
+            <div class="figures-item_description">Интернет-магазинов по всему миру</div>
+          </div>
+    
+          <div class="figures-item figures-item__customers">
+            <div class="figures-item_title">C нами сотрудничают</div>
+            <div class="figures-item_value"></div>
+            <div class="figures-item_description">Клиентов нашей компании <br> и это число постоянно растет</div>
+          </div>
+    
+          <div class="figures-item figures-item__providers">
+            <div class="figures-item_title">C нами работают</div>
+            <div class="figures-item_value"></div>
+            <div class="figures-item_description">Поставщиков нашей компании <br> и это число постоянно растет</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="services">
+      <div class="limiter">
+        <div id="services-carousel" class="carousel slide" data-ride="carousel" data-pause="false" data-interval="5000">
+          <div class="carousel-inner">
+            <div class="active item services-item">
+              <div class="services-item-wrapper services-item__air" data-src="images/services/services-bg__air.jpg">
+                <div class="services-item_name">PAYMO.Air</div>
+                <div class="services-item_title">Универсальная платформа по приему <br> онлайн-платежей</div>
+                <a href="" class="button">Подробнее</a>
+              </div>
+            </div>
+    
+            <div class="item services-item">
+              <div class="services-item-wrapper services-item__HoU" data-src="images/services/services-bg__HoU.jpg">
+                <div class="services-item_name">PAYMO.ЖКХ</div>
+                <div class="services-item_title">Cервис для строительных и ЖКХ-компаний</div>
+                <div class="services-item_description">Даем все необходимые способы оплаты <br> для управляющих компаний <br> с очень низкой комиссией. </div>
+                <a href="" class="button">Подробнее</a>
+              </div>
+            </div>
+    
+            <div class="item services-item">
+              <div class="services-item-wrapper services-item__bank" data-src="images/services/services-bg__bank.jpg">
+                <div class="services-item_name">PAYMO.Bank</div>
+                <div class="services-item_title">Универсальное решение для банков и МФО</div>
+                <div class="services-item_description">Наши технологии дают клиенту возможность совершить платеж прямо у вас на сайте</div>
+                <a href="" class="button">Подробнее</a>
+              </div>
+            </div>
+    
+            <div class="item services-item">
+              <div class="services-item-wrapper services-item__retail" data-src="images/services/services-bg__retail.jpg">
+                <div class="services-item_name">PAYMO.Retail</div>
+                <div class="services-item_title">Программное обеспечение <br> для кассовых аппаратов</div>
+                <a href="" class="button">Подробнее</a>
+              </div>
+            </div>
+    
+    
+          </div>
+    
+          <div class="carousel-nav">
+            <div class="carousel-nav-item carousel-nav-item__prev" href="#services-carousel" role="button" data-slide="prev"></div>
+            <div class="carousel-nav-item carousel-nav-item__next" href="#services-carousel" role="button" data-slide="next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews">
+      <div class="limiter">
+        <div class="reviews-content">
+          <div class="reviews-title">Отзывы</div>
+          <div class="reviews-title reviews-title__client">Клиентов</div>
+    
+          <div id="reviews-carousel" class="carousel slide" data-ride="carousel" data-pause="false" data-interval="5000">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <div class="active item reviews-item">
+                <div class="client-message">Руководство управляющей компании ООО «Монолит Сервис» искренне благодарит коллектив PAYMO за профессионализм и порядочность, проявленные во время совместной работы по внедрению системы приёма онлайн-платежей за услуги, предоставляемые нашей Компанией. Платформа приёма платежей, разработанная Вашей Компанией, позволила нам значительно повысить прозрачность расчётов с Плательщицами и снизить нагрузку на персонал. Считаем, что подключение Вашей системы на нашем сайте в качестве дополнительного платёжного канала послужит для наших жильцов дополнительным стимулом к оплате услуг ЖКХ.</div>
+                <div class="client">
+                  <div class="client-company"><img src="images/reviews/monolit.png" srcset="images/reviews/monolit@2x.png 2x" alt=""></div>
+                  <div class="client-description client-description__name">П.Н.Андреев</div>
+                  <div class="client-description client-description__position">Генеральный директор ООО «Монолит Сервис»</div>
+                </div>
+              </div>
+    
+              <div class="item reviews-item">
+                <div class="client-message">Специалисты компании PAYMO реализовали удобное и эффективное решение онлайн оплаты в нашем магазине – оплату во фрейме. Дизайн платёжного фрейма мы разработали сами. В процессе установки кейса все наши пожелания выполнялись быстро и качественно. Сейчас можно наблюдать значительное уменьшение количества отказов от оплаты на нашем сайте.</div>
+    
+                <div class="client">
+                  <div class="client-company"><img src="images/reviews/kupikupon.png" srcset="images/reviews/kupikupon@2x.png 2x" alt=""></div>
+                  <div class="client-description client-description__name">Комил Рузаев</div>
+                  <div class="client-description client-description__position">Исполнительный директор КупиКупон</div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="carousel-nav">
+              <div class="carousel-nav-item carousel-nav-item__prev" href="#reviews-carousel" role="button" data-slide="prev"></div>
+              <div class="carousel-nav-item carousel-nav-item__next" href="#reviews-carousel" role="button" data-slide="next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="limiter">
+        <div class="footer-support">
+          <div class="footer-support-item">
+            <div class="footer-support-item_title">Звоните по любым вопросам</div>
+            <div class="footer-support-item_value">8 (495) 369-60-67</div>
+          </div>
+          <div class="footer-support-item">
+            <div class="footer-support-item_title">пишите по любым вопросам</div>
+            <div class="footer-support-item_value"><a href="mailto:info@paymo.ru">info@paymo.ru</a></div>
+          </div>
+          <div class="footer-support-links">
+            <a href="" class="footer-support-links-item vk"></a>
+            <a href="" class="footer-support-links-item facebook"></a>
+            <a href="" class="footer-support-links-item headhunter"></a>
+          </div>
+        </div>
+        <div class="footer-menu">
+          <div class="footer-menu-list">
+            <div class="footer-menu-title">наши продукты</div>
+            <div class="footer-menu-nav">
+              <div class="footer-menu-nav-item"><a href="">Paymo Air</a></div>
+              <div class="footer-menu-nav-item"><a href="">Paymo ЖКХ</a></div>
+              <div class="footer-menu-nav-item"><a href="">Paymo Bank</a></div>
+              <div class="footer-menu-nav-item"><a href="">Paymo Retail</a></div>
+            </div>
+          </div>
+          <div class="footer-menu-list">
+            <div class="footer-menu-title">техническая информация</div>
+            <div class="footer-menu-nav">
+              <div class="footer-menu-nav-item"><a href="">Документация(API)</a></div>
+              <div class="footer-menu-nav-item"><a href="">Модули для CMS</a></div>
+              <div class="footer-menu-nav-item"><a href="">Информация</a></div>
+            </div>
+          </div>
+          <div class="footer-menu-list">
+            <div class="footer-menu-title">о компании</div>
+            <div class="footer-menu-nav">
+              <div class="footer-menu-nav-item"><a href="">Демо-магазин</a></div>
+              <div class="footer-menu-nav-item"><a href="">Тарифы</a></div>
+              <div class="footer-menu-nav-item"><a href="">Наши клиенты</a></div>
+            </div>
+          </div>
+          <div class="copyright">
+            PAYMO, 2015 © Все права защищены.
+          </div>
+          <div class="created">
+          <div class="created-item">Сделано в</div>
+          <img class="created-logo" src="styles/img/aic-logo.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/build.js"></script>
+  </body>
+</html>
